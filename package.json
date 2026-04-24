@@ -1,0 +1,11 @@
+{
+  "name": "my-elitewear",
+  "version": "1.0.0",
+  "description": "A fully featured **MERN Stack E-commerce Web Application** designed to deliver a luxury shopping experience. It includes both **user-facing** and **admin** functionalities like secure login, product management, smart filtering, and multiple payment options including **Razorpay**, **Stripe**, and **Cash on Delivery**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
