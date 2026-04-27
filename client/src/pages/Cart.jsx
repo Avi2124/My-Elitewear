@@ -74,7 +74,7 @@ const Cart = () => {
         const validCoupons = (data.coupons || []).filter(coupon => {
           return new Date(coupon.expiryDate) >= today;
         });
-        setAvailableCoupons(data.coupons || []);
+        setAvailableCoupons(validCoupons);
       } else {
         toast.error(data.message || "Failed to load coupons");
       }
