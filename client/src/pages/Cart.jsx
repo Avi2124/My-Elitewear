@@ -26,44 +26,6 @@ const Cart = () => {
 
   // ✅ Fetch coupons
   const fetchCoupons = async () => {
-  try {
-    const res = await fetch(${backendUrl}/api/coupon/list);
-    const data = await res.json();
-
-    if (data.success) {
-      const today = new Date();
-
-      // filter valid coupons
-      const validCoupons = (data.coupons || []).filter(coupon => {
-        return new Date(coupon.expiryDate) >= today;
-      });
-
-      setAvailableCoupons(validCoupons);
-    } else {
-      toast.error(data.message || "Failed to load coupons");
-    }
-  } catch (err) {
-    console.log(err);
-    toast.error("Error fetching coupons");
-  }
-};
-
-  // ✅ Calculate total
-  const getCartTotal = () => {
-    let total = 0;
-
-    cartData.forEach((item) => {
-      const product = products.find((p) => p._id === item._id);
-      if (product) {
-        total += product.price * item.quantity;
-      }
-    });
-
-    return total;
-  };
-
-  // ✅ Fetch coupons
-  const fetchCoupons = async () => {
     try {
       const res = await fetch(`${backendUrl}/api/coupon/list`);
       const data = await res.json();
@@ -82,6 +44,20 @@ const Cart = () => {
       console.log(err);
       toast.error("Error fetching coupons");
     }
+  };
+
+  // ✅ Calculate total
+  const getCartTotal = () => {
+    let total = 0;
+
+    cartData.forEach((item) => {
+      const product = products.find((p) => p._id === item._id);
+      if (product) {
+        total += product.price * item.quantity;
+      }
+    });
+
+    return total;
   };
 
   // ✅ Apply coupon
