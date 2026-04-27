@@ -90,7 +90,7 @@ const Cart = () => {
         toast.error(data.message);
       }
     } catch (err) {
-      toast.error("Error applying coupon");
+      toast.error("Error applying coupon", err);
     }
   };
 
