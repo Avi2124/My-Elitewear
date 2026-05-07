@@ -8,7 +8,7 @@
 - **Authentication**: JWT (JSON Web Tokens), Bcrypt
 - **Payments**: Razorpay, Stripe, Cash on Delivery
 - **Image Handling**: Cloudinary / Local (based on configuration)
-- **Deployment**: Vercel / Netlify / Render / Heroku (optional)
+- **Deployment**: Vercel
 
 ---
 
@@ -64,8 +64,8 @@
 ### 🖥️ Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/vante-co-ecommerce.git
-cd vante-co-ecommerce
+git clone https://github.com/yourusername/my-elitewear.git
+cd myelitewear
 ````
 
 ### 🚀 Backend Setup
